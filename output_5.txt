@@ -1,0 +1,2 @@
+Global Rank: 5, World Size: 8
+Mesh Shape: tensor([2, 2, 2], dtype=torch.int32)
