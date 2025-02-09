@@ -1,7 +1,7 @@
 ### Joshua Greenfield (@ Educative.io)
 #### PyTorch Tensor Manipulation for Machine Learning
 
-Course URL: https://www.educative.io/courses/pytorch-tensor-manipulation/about-this-course?openHLOPage=true
+[Educative.io PyTorch Course](https://www.educative.io/courses/pytorch-tensor-manipulation/about-this-course?openHLOPage=true)
 
 
 
@@ -236,7 +236,7 @@ Similar to other frameworks, PyTorch too defines its types
 for its tensor. Some frequently used types are listed in the
 table below.
 
-<!-- URL_for_Image: -->
+<!-- URL_for_Image: --> 
 
 ![Tensor Datatype Table from Educative.io](./tensor-datatype-table.png)
 
@@ -293,7 +293,7 @@ table below.
 
 
 ### Meta.ai
-###### URL_for_Citation: https://www.meta.ai/c/9dd9413b-4b53-4a11-9617-ae8dc86c050b
+[URL for Citation](https://www.meta.ai/c/9dd9413b-4b53-4a11-9617-ae8dc86c050b)
 ###### Meta wanted the table reordered for the sake of perfectionism:
 
 
@@ -349,7 +349,7 @@ classes. If provided, the optional argument weight should be
 a 1D Tensor assigning weight to each of the classes. This is
 particularly useful when you have an unbalanced training set.
 
-URL_for_Citation: https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html
+[URL for Citation](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)
 
 *Parameters*
 
