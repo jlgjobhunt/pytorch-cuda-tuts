@@ -1,3 +1,4 @@
+### Joshua Greenfield (@ Educative.io)
 #### PyTorch Tensor Manipulation for Machine Learning
 
 Course URL: https://www.educative.io/courses/pytorch-tensor-manipulation/about-this-course?openHLOPage=true
@@ -240,7 +241,7 @@ URL_for_Image:
 ![Tensor Datatype Table from Educative.io](./tensor-datatype-table.png)
 
 
-
+### Joshua Greenfield (@ Educative.io)
 | Data Type |   dtype   |  CPU tensor  |  GPU tensor  |
 |-----------|-----------|--------------|--------------|
 | 32-bit    | torch.    | torch.       | torch.cuda.  |
@@ -324,7 +325,7 @@ URL_for_Image:
 | 64-bit    | torch.float64| DoubleTensor | DoubleTensor |
 |-----------|-----------|--------------|--------------|
 
-
+### Joshua Greenfield (@ Educative.io)
 Tensor type is a vital consideration for two primary reasons:
 
 1.  It affects speed and memory usage because the GPU has
@@ -627,3 +628,5 @@ print("The shape of vectorT4 has been mutated in vectorT5 to be {}.".format(vect
 print("The new tensor is {}.".format(vectorT5))
 
 ```
+
+
