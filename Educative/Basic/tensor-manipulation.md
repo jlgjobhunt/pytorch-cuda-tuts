@@ -657,3 +657,35 @@ print("The shape of result is {}".format(resultTe.shape))
 print("The shape of result is {}".format(resultTe.shape))
 
 ```
+
+
+###### Stacking the tensors
+The function torch.cat() concatenates the given sequence of
+seq tensors in the given dimensions.
+
+The function torch.stack() is similar to torch.cat(),
+torch.stack() concatenates the sequence of tensors along
+a new dimension.
+
+For example, there are two tensors with the shape (3, 4).
+We stack these two tensors with dim=1, then the shape of
+the return value would be (3, 2, 4).
+
+
+```python
+import torch
+
+vectorT7 = torch.randn((2, 2))
+vectorT8 = torch.randn((3, 3))
+
+print("The original tensor vectorT7 is: \n {}:".format(vectorT7))
+
+print("The original tensor vectorT8 is: \n {}:".format(vectorT8))
+
+resultStack = torch.stack((vectorT7, vectorT8), dim=1)
+
+print("The shape of result is {}.".format(resultStack.shape))
+
+print("The new tensor is: \n {}".format(resultStack))
+
+```
