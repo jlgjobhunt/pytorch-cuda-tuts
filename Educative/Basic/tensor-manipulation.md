@@ -236,7 +236,7 @@ Similar to other frameworks, PyTorch too defines its types
 for its tensor. Some frequently used types are listed in the
 table below.
 
-URL_for_Image: 
+<!-- URL_for_Image: -->
 
 ![Tensor Datatype Table from Educative.io](./tensor-datatype-table.png)
 
