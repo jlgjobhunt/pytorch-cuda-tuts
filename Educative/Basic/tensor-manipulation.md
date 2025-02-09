@@ -630,3 +630,30 @@ print("The new tensor is {}.".format(vectorT5))
 ```
 
 
+#### Concatenating Tensors
+###### Concatenate the Tensors
+The PyTorch method torch.cat() can concatenate a sequence
+of tensors in a given dimension. All tensors should have the same shape. Below are the important parameters.
+
+* tensors: A list of tensors must have the same shape.
+* dim: The dimension over which the tensors are concatenated. Take 2D tensors as an example, dim=0 means the operation would be performed row-wise. Setting dim=1 means the operation would be performed column-wise.
+
+```python
+import torch
+
+matrixTd = torch.randn((3, 3))
+
+print("The original tensor matrixTd is \n {}".format(matrixTd))
+resultTd = torch.cat((matrixTd, matrixTd), dim=0)
+
+print("The shape of result is {}".format(resultTd.shape))
+print("The new tensor is \n {}".format(resultTd))
+
+
+matrixTe = torch.randn((4, 4))
+print("The original tensor matrixTe is \n {}".format(matrixTe))
+resultTe = torch.cat((matrixTe, matrixTe), dim=1)
+print("The shape of result is {}".format(resultTe.shape))
+print("The shape of result is {}".format(resultTe.shape))
+
+```
