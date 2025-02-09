@@ -785,3 +785,59 @@ print("The sum value of dim=0 \n {}".format(c))
 
 
 ```
+
+
+
+###### Comparison Functions
+PyTorch allows us to compare a tensor with another tensor
+or a scalar, element-wise. The return value is a Boolean
+tensor that contains a True at each location where the
+comparison is true.
+
+For these functions in the list, they require two parameters.
+
+* inputs: The tensor to compare.
+* other: The tensor or value to compare. If it's a tensor, then the comparison is performed element-wise.
+
+
+|    lt     | Less than                |     
+|    le     | Less than                |
+|    gt     | Greater than             |
+|    ge     | Greater than or equal to |
+|    eq     | Equal to                 |
+|    ne     | Not Equal to             |
+|           |                          |
+|           |                          |
+|           |                          |
+|-----------|-----------|--------------|
+
+
+```python
+
+import torch
+
+
+vectorT15 = torch.randn((3,4))
+print("The original tensor is \n {}".format(vectorT15))
+
+
+print("="*30)
+
+print("The comparison between a tensor and a single value.\n")
+
+comparisonT16 = torch.lt(vectorT15, 0.5)
+
+print("The element is less than 0.5 \n {}".format(comparisonT16))
+
+print("="*30)
+
+vectorT17 = torch.randn((3, 4))
+
+print("The comparison between two tensors.\n")
+
+comparisonT18 = torch.gt(vectorT15, vectorT17)
+print("The comparison result between tensor vectorT15 & vectorT17: \n {}".format(comparisonT18))
+
+
+
+```
