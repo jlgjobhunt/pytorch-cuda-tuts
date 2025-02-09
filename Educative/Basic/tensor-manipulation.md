@@ -745,3 +745,43 @@ matrixTe = torch.tensor([[1, 2], [3, 4]])
 
 
 ```
+
+
+#### Reduction and Comparison
+
+###### Reduction functions
+The reduction operator is a type of operator that is commonly used in parallel programming to reduce the elements of an array into a single result. For example, we can calculate the mean value of a float array as a reduction operation.
+
+PyTorch provides some useful functions for reduction. If you have used NumPy before, you may notice the usage and name are the same. Below are some important functions, they all have a parameter dim, which indicates on which dimension the summarization is performed. The default value for dim is 0.
+
+mean : Get the mean value of the tensor in the given dimension.
+
+sum : Sum the values of the tensor over the given dimension.
+
+median : Get the median value of tensor in the given dimension.
+
+std : Compute the standard deviation of the tensor over the given dimension.
+
+prod : Product the values of the tensor over the given dimension.
+
+cumsum : Cumulative sum of values of the tensor over the given dimension.
+
+
+```python
+import torch
+
+vectorT12 = torch.randn((3, 4))
+print("The original tensor is: \n {}".format(vectorT12))
+
+print("="*30)
+vectorT13 = torch.mean((vectorT12, dim=1))
+print("The mean value of dim=1 \n {}".format(vectorT13))
+
+print("="*30)
+vectorT14 = torch.sum((vectorT12, dim=0))
+print("The sum value of dim=0 \n {}".format(c))
+
+
+
+
+```
