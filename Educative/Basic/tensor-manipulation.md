@@ -630,6 +630,7 @@ print("The new tensor is {}.".format(vectorT5))
 ```
 
 
+
 #### Concatenating Tensors
 ###### Concatenate the Tensors
 The PyTorch method torch.cat() can concatenate a sequence
@@ -687,5 +688,60 @@ resultStack = torch.stack((vectorT7, vectorT8), dim=1)
 print("The shape of result is {}.".format(resultStack.shape))
 
 print("The new tensor is: \n {}".format(resultStack))
+
+```
+
+
+#### Element-wise Mathematical Operations on Tensors
+
+###### Math operation with scalar
+If you have used the NumPy array before, you may already know that we can perform a math operation between a NumPy array and a scalar. PyTorch tensor supports almost the same operations. In PyTorch, we perform it in two ways:
+
+  * The operators, such as +, -, and *.
+  * The functions, such as add, sub, and mul.
+
+PyTorch supports most of the math functions under the native Python math module.
+You could find a complete list from the [official sites](https://pytorch.org/docs/stable/torch.html#pointwise-ops).
+
+These functions do not change the original tensor.
+The changed tensor is returned as a new tensor.
+PyTorch provides a version of thes functions that allows us to change the tensor in-place. These functions are suffixed with an underscore such as function_ is suffixed with _.
+
+```python
+import torch
+
+tensorA = torch.tensor([1, 2, 3])
+print(tensorA)
+
+resultA = tensorA + 3
+print(resultA)
+
+resultA = tensorA.add(3)
+print(resultA)
+
+
+```
+
+
+###### Math operation between tensors
+Since the tensors could be performed with a single scalar, it also works between two tensors with the same shape. It even works for 2D or higher ranked tensors. These operations are element-wise, which means these operations happen between two pairs of corresponding elements of these two tensors.
+
+To modify the original tensor, use the _ suffix.
+
+```python
+import torch
+
+vectorT9 = torch.tensor([1, 2, 3])
+vectorT10 = torch.tensor([2, 4, 6])
+
+vectorT11 = vectorT9 + vectorT10
+
+print("The multiple between vectorT9 and vectorT10 is {}.".format(vectorT11))
+
+vectorT11 = vectorT9.mul(vectorT10)
+print("The multiple between vectorT9 and vectorT10 is {}.".format(vectorT11))
+
+matrixTe = torch.tensor([[1, 2], [3, 4]])
+
 
 ```
