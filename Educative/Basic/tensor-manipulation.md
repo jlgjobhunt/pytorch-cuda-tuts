@@ -841,3 +841,115 @@ print("The comparison result between tensor vectorT15 & vectorT17: \n {}".format
 
 
 ```
+
+
+#### Matrix Vector Multiplication
+
+import torch
+
+
+###### Matrix multiplication with vectors.
+
+Let us first see how we can multiply a matrix with a vector.
+PyTorch provides the mv() function for this purpose.
+
+We can use mv() in two ways. mv() could be called from a
+tensor, or just call it from torch.mv(). The first parameter
+for torch.mv() is a matrix.
+
+
+```python
+import torch
+
+result = torch.mv(mat, vec)
+result = mat.mv(vec)
+
+```
+
+The code above shows two methods to multiply a matrix with a vector. You could try it below.
+
+The order of the matrix and vector is critical, otherwise, one may trigger the runtime error. The first argument of mv should be the matrix, the second should be the vector. For
+example, if the matrix is an (n*m) tensor, then the vector
+should be is a 1-D tensor of size m.
+
+
+```python
+import torch
+
+matrixTf = torch.ones((2, 4))
+
+print("The matrix is: \n {}".format(matrixTf))
+
+# Print Line of Demarcation
+print("="*30)
+
+vectorT18 = torch.tensor([1, 2, 3, 4], dtype=torch.float)
+print("The vector is: \n {}".format(vector.T18))
+
+# Print Line of Demarcation
+print("="*30)
+
+resultB = matrixTf.mv(vectorT18)
+print("The result is: \n {}".format(resultB))
+
+
+
+```
+
+
+###### Matrix multiplication with matrices
+mm() is used in PyTorch to multiply two matrices.
+Similar to mv(), we have two wasy to call mm().
+
+mm() does not broadcast. For broadcasting matrix products,
+we should use torch.matmul(). The term broadcasting describes how to treats arrays with different shapes during arithmetic operations. Subject to certain constraints, the
+smaller array is "broadcast" across the larger array so that they have compatible shapes. You could find more information about broadcasting from the wiki.
+
+
+```python
+
+result = torch.mm(mat1, mat2)
+
+result = mat1.mm(mat2)
+
+```
+
+The code above shows two methods to multiply a matrix with another one.
+
+```python
+import torch
+
+matrixTg = torch.ones((2, 4))
+matrixTh = torch.ones((4, 3))
+
+resultC = matrixTg.mm(matrixTh)
+print("The result is: \n {}".format(result))
+
+
+
+```
+
+
+###### Dot product between vectors
+
+The dot product is the sum of the products of the corresponding element of the two tensors. The function dot() is the function for this purpose.
+
+We can use dot() in two ways. dot() could be called from a 1D tensor, or just call it from torch.dot(), which requires two 1D tensors.
+
+```python
+
+import torch
+
+vectorT19 = torch.tensor([1, 2, 3, 4])
+vectorT20 = torch.tensor([2, 3, 4, 5])
+
+resultD = vectorT19.dot(vectorT20)
+print("The result is \n {}".format(resultD))
+
+
+print("="*30)
+resultD = torch.dot(vectorT19, vectorT20)
+print("The result is \n {}".format(resultD))
+
+
+```
